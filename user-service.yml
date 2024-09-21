@@ -4,6 +4,10 @@ spring:
     url: jdbc:postgresql://localhost:5432/ecommerce
     username: user
     password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
   kafka:
     bootstrap-servers: kafka:9094
   redis:
