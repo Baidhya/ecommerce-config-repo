@@ -2,8 +2,8 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/ecommerce
-    username: user
-    password: password
+    username: postgres
+    password: admin
   jpa:
     hibernate:
       ddl-auto: update
