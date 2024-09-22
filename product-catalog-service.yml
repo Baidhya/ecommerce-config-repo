@@ -4,8 +4,8 @@ spring:
     url: jdbc:postgresql://localhost:5432/ecommerce
     username: user
     password: password
-  kafka:
-    bootstrap-servers: kafka:9092  # Address of the Kafka broker in Docker Compose
+  #kafka:
+    #bootstrap-servers: kafka:9092  # Address of the Kafka broker in Docker Compose
   jpa:
     hibernate:
       ddl-auto: update
