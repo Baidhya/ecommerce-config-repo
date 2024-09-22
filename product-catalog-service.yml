@@ -4,24 +4,15 @@ spring:
     url: jdbc:postgresql://localhost:5432/ecommerce
     username: user
     password: password
+  kafka:
+    bootstrap-servers: kafka:9092  # Address of the Kafka broker in Docker Compose
   jpa:
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-    show-sql: true
-  kafka:
-    bootstrap-servers: kafka:9092
-    producer:
-      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
-    consumer:
-      group-id: product-catalog-group
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-    listener:
-      missing-topics-fatal: false  # Optional: ignores missing topics when the app starts
+    show-sql: true  
   redis:
     host: redis
     port: 6379
